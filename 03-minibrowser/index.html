@@ -1,0 +1,46 @@
+<!-- <main>
+    <header>
+        <div class="close-area"></div>
+        <input placeholder="https://" value="https://mariosouto.com
+        ">
+    </header>
+    <iframe src="https://mariosouto.com"></iframe>
+</main> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini browser Experimental</title>
+</head>
+<body>
+
+    <script>
+        var aba1 = {
+            titulo: 'Título da aba 1',
+            url: ''
+        }
+    
+        var aba2 = {
+            titulo: 'Título da aba 2',
+            url: ''
+        }
+    
+        const abas = [ aba1, aba2 ]
+
+        for( aba of abas ){
+            console.log(aba.titulo);
+            var valorAtualDoHTML = document.body.innerHTML;
+            document.body.innerHTML = valorAtualDoHTML + `<li><a href="${aba.url}">${aba.titulo}</a></li>`;
+        }
+    
+     // O que tem em uma aba do navegador?
+     // [ ] Título
+     // [ ] url
+     // [ ] página de fato (html, css, javascript)
+    </script>
+    <link rel="stylesheet" href="./style.css">
+
+</body>
+</html>
